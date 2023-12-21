@@ -1,0 +1,27 @@
+#sea-anemone wezterm theme by david
+[colors]
+foreground="#fcfcfc"
+background="#04171d"
+cursor_fg="#04171d"
+cursor_bg="#fcfcfc"
+
+ansi=[
+    "#677b86",
+    "#d13434",
+    "#1697b1",
+    "#2ba668",
+    "#44b5a1",
+    "#b8647f",
+    "#44bfc1",
+    "#e7e4e4",
+    ]
+brights=[
+    "#8cc2e1",
+    "#c85e5e",
+    "#3fcdea",
+    "#00c663",
+    "#78c1b0",
+    "#d0718e",
+    "#33e7e1",
+    "#fef5f5",
+]

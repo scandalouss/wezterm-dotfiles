@@ -1,4 +1,4 @@
-#sea-anemone wezterm theme by david
+#navy and ivory theme
 [colors]
 foreground="#e8dfd6"
 background="#021b21"
@@ -15,9 +15,10 @@ ansi=[
     "#44b5b1",
     "#f2f1b9",
 ]
+
 brights=[
     "#065f73",
-    "#3f5847",
+    "#ef5847",
     "#a2d9b1",
     "#beb090",
     "#61778d",

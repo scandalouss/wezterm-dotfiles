@@ -5,8 +5,6 @@ if wezterm.config_builder then
     config=wezterm.config_builder()
 end
 
---config begins here
-
 config={
     font=wezterm.font("UbuntuMono Nerd Font"),
     font_size=10.0,
@@ -19,10 +17,16 @@ config={
     use_fancy_tab_bar=false,
     front_end="OpenGL",
     freetype_load_target="Light",
-    freetype_load_flags="DEFAULT|NO_AUTOHINT|NO_HINTING",
-    display_pixel_geometry="BGR",
-}
+    freetype_load_flags="DEFAULT|NO_HINTING",
+    display_pixel_geometry="RGB",
+    warn_about_missing_glyphs=false,
 
---config ends here
+    window_padding={
+        left=0,
+        right=0,
+        top=0,
+        bottom=0,
+    },
+}
 
 return config

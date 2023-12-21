@@ -2,8 +2,9 @@
 [colors]
 foreground="#e8dfd6"
 background="#021b21"
-cursor_fg="#e8dfd6"
-cursor_bg="#021b21"
+cursor_fg="#021b21"
+cursor_bg="#e8dfd6"
+
 
 ansi=[
     "#032c36",

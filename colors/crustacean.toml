@@ -1,0 +1,28 @@
+#crustacean wezterm theme by david
+[colors]
+foreground="#fcfcfc"
+background="#04171d"
+cursor_fg="#04171d"
+cursor_bg="#fcfcfc"
+
+ansi=[
+    "#032c36",
+    "#d13434",
+    "#6ab791",
+    "#7f705b",
+    "#1697b1",
+    "#ff5879",
+    "#2fb0ab",
+    "#f3f1d9",
+]
+
+brights=[
+    "#055567",
+    "#ef5847",
+    "#8ed9a2",
+    "#bcae8f",
+    "#45bad2",
+    "#ff99a1",
+    "#79e4e3",
+    "#ffffd6",
+]

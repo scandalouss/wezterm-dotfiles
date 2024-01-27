@@ -14,7 +14,7 @@ config={
     font=wezterm.font("UbuntuMono Nerd Font"),
     font_size=10.0,
     check_for_updates=false,
-    color_scheme="sea-anemone",
+    color_scheme="crustacean",
     window_background_opacity=0.95,
     text_background_opacity=0.95,
     hide_tab_bar_if_only_one_tab=true,
@@ -43,7 +43,42 @@ config={
             key='RightArrow',
             mods='SHIFT',
             action=wezterm.action.ActivateTabRelative(1),
-        }
+        },
+        {
+            key='h',
+            mods='CTRL|SHIFT',
+            action=wezterm.action.SplitHorizontal{
+                args={'bash'}
+            },
+        },
+        {
+            key='v',
+            mods='CTRL|SHIFT',
+            action=wezterm.action.SplitVertical{
+                args={'bash'}
+            },
+        },
+        {
+            key='LeftArrow',
+            mods='CTRL',
+            action=wezterm.action.ActivatePaneDirection 'Left',
+        },
+        {
+            key='RightArrow',
+            mods='CTRL',
+            action=wezterm.action.ActivatePaneDirection 'Right',
+        },
+        {
+            key='UpArrow',
+            mods='CTRL',
+            action=wezterm.action.ActivatePaneDirection 'Up',
+
+        },
+        {
+            key='DownArrow',
+            mods='CTRL',
+            action=wezterm.action.ActivatePaneDirection 'Down'
+        },
     }
 }
 

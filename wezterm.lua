@@ -11,10 +11,10 @@ if wezterm.config_builder then
 end
 
 config={
-    font=wezterm.font("UbuntuMono Nerd Font"),
+    font=wezterm.font("Ubuntu Mono"),
     font_size=10.0,
     check_for_updates=false,
-    color_scheme="crustacean",
+    color_scheme="jellyfish",
     window_background_opacity=0.95,
     text_background_opacity=0.95,
     hide_tab_bar_if_only_one_tab=true,
@@ -25,6 +25,7 @@ config={
     freetype_load_flags="NO_HINTING",
     display_pixel_geometry="RGB",
     warn_about_missing_glyphs=false,
+    enable_kitty_graphics=true,
 
     window_padding={
         left=0,
@@ -45,14 +46,14 @@ config={
             action=wezterm.action.ActivateTabRelative(1),
         },
         {
-            key='h',
+            key='j',
             mods='CTRL|SHIFT',
             action=wezterm.action.SplitHorizontal{
                 args={'bash'}
             },
         },
         {
-            key='v',
+            key='h',
             mods='CTRL|SHIFT',
             action=wezterm.action.SplitVertical{
                 args={'bash'}

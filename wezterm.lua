@@ -13,7 +13,7 @@ end
 config={
     font=wezterm.font("Ubuntu Mono"),
     font_size=10.0,
-    check_for_updates=false,
+    check_for_updates=true,
     color_scheme="jellyfish",
     window_background_opacity=0.95,
     text_background_opacity=0.95,
@@ -26,12 +26,22 @@ config={
     display_pixel_geometry="RGB",
     warn_about_missing_glyphs=false,
     enable_kitty_graphics=true,
+    default_cwd=wezterm.home_dir,
 
     window_padding={
         left=0,
         right=0,
         top=0,
         bottom=0,
+    },
+
+    --remove copy on selection/highlight, shit's annoying >:(
+    mouse_bindings={
+        {
+        event = { Up = { streak = 1, button = "Left" } },
+        mods = "NONE",
+        action = wezterm.action.Nop,
+    }
     },
 
     keys={

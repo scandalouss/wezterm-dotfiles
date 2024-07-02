@@ -12,7 +12,7 @@ end
 
 config={
     font=wezterm.font("Ubuntu Mono"),
-    font_size=10.0,
+    font_size=11.0,
     check_for_updates=true,
     color_scheme="jellyfish",
     window_background_opacity=0.95,

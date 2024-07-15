@@ -1,33 +1,34 @@
 --finally cleaned it up a bit
 
 local wezterm=require("wezterm")
-local config={}
+local conf={}
 
-if wezterm.config_builder then
-    config=wezterm.config_builder()
+if wezterm.conf_builder then
+    conf=wezterm.config_builder()
 end
 
 --generic settings
-config.check_for_updates=true
-config.color_scheme="sleepyhollow"
-config.front_end="OpenGL"
-config.default_cwd=wezterm.home_dir
-config.enable_kitty_graphics=true
-config.window_background_opacity=0.95
-config.text_background_opacity=0.95
-config.use_fancy_tab_bar=false
-config.hide_tab_bar_if_only_one_tab=true
+conf.check_for_updates=true
+conf.color_scheme="jellyfish"
+conf.front_end="OpenGL"
+conf.default_cwd=wezterm.home_dir
+conf.default_workspace="home"
+conf.enable_kitty_graphics=true
+conf.window_background_opacity=0.95
+conf.text_background_opacity=0.95
+conf.use_fancy_tab_bar=false
+conf.hide_tab_bar_if_only_one_tab=true
 
 --font stuff
-config.font=wezterm.font("Ubuntu Mono")
-config.font_size=12.0
-config.freetype_load_target="Light"
-config.freetype_load_flags="NO_HINTING"
-config.display_pixel_geometry="RGB"
-config.warn_about_missing_glyphs=true
-config.adjust_window_size_when_changing_font_size=false
+conf.font=wezterm.font("Ubuntu Mono")
+conf.font_size=11.0
+conf.freetype_load_target="Light"
+conf.freetype_load_flags="NO_HINTING"
+conf.display_pixel_geometry="RGB"
+conf.warn_about_missing_glyphs=true
+conf.adjust_window_size_when_changing_font_size=false
 
-config.window_padding={
+conf.window_padding={
     left=0,
     right=0,
     top=0,
@@ -35,12 +36,15 @@ config.window_padding={
 }
 
 --keybinds
-config.mouse_bindings={
+conf.mouse_bindings={
     --get rid of the stupid copy on selection/highlight shit
-    {event={Up={streak=1,button="Left"}},mods="NONE",action=wezterm.action.Nop}
+    {event={Up={streak=1,button="Left"}},mods="NONE",action=wezterm.action.Nop},
+    --disabling copy on selection also disabled opening links with the cursor,
+    --turning that back on with this cause it was driving me NUTS
+    {event={Up={streak=1,button="Left"}},mods="NONE",action=wezterm.action.OpenLinkAtMouseCursor}
 }
 
-config.keys={
+conf.keys={
     --switching tabs
     {key="LeftArrow",mods="SHIFT",action=wezterm.action.ActivateTabRelative(-1)},
     {key="RightArrow",mods="SHIFT",action=wezterm.action.ActivateTabRelative(1)},
@@ -54,4 +58,4 @@ config.keys={
     {key="DownArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Down")},
 }
 
-return config
+return conf

@@ -20,7 +20,7 @@ conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true
 
 --font stuff
-conf.font=wezterm.font("Ubuntu Mono")
+conf.font=wezterm.font("ubuntu mono")
 conf.font_size=11.0
 conf.freetype_load_target="Light"
 conf.freetype_load_flags="NO_HINTING"

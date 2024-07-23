@@ -1,0 +1,28 @@
+#greenandred wezterm theme by david
+[colors]
+foreground="#fadccf"
+background="#0b0b0c"
+cursor_fg="#0b0b0c"
+cursor_bg="#fadccf"
+
+ansi=[
+    "#3d3b4b",
+    "#da3c3c",
+    "#3ebf6e",
+    "#904e4b",
+    "#4ba98d",
+    "#ec468c",
+    "#33bd99",
+    "#fdded1",
+]
+
+brights=[
+    "#4e4b61",
+    "#e95a5a",
+    "#5aeb90",
+    "#a37371",
+    "#69e4c0",
+    "#fa90bd",
+    "#68d4f2",
+    "#f7e9c7",
+]

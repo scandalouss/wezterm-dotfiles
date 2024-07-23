@@ -9,18 +9,18 @@ end
 
 --generic settings
 conf.check_for_updates=true
-conf.color_scheme="jellyfish"
+conf.color_scheme="greenandred"
 conf.front_end="OpenGL"
 conf.default_cwd=wezterm.home_dir
 conf.default_workspace="home"
 conf.enable_kitty_graphics=true
-conf.window_background_opacity=0.95
-conf.text_background_opacity=0.95
+conf.window_background_opacity=0.94
+conf.text_background_opacity=1.00
 conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true
 
 --font stuff
-conf.font=wezterm.font("ubuntu mono")
+conf.font=wezterm.font("ubuntumono nerd font")
 conf.font_size=11.0
 conf.freetype_load_target="Light"
 conf.freetype_load_flags="NO_HINTING"
@@ -39,6 +39,8 @@ conf.window_padding={
 conf.mouse_bindings={
     --get rid of the stupid copy on selection/highlight shit
     {event={Up={streak=1,button="Left"}},mods="NONE",action=wezterm.action.Nop},
+    {event={Up={streak=2,button="Left"}},mods="NONE",action=wezterm.action.Nop},
+    {event={Up={streak=3,button="Left"}},mods="NONE",action=wezterm.action.Nop},
     --disabling copy on selection also disabled opening links with the cursor,
     --turning that back on with this cause it was driving me NUTS
     {event={Up={streak=1,button="Left"}},mods="NONE",action=wezterm.action.OpenLinkAtMouseCursor}
@@ -50,8 +52,8 @@ conf.keys={
     {key="RightArrow",mods="SHIFT",action=wezterm.action.ActivateTabRelative(1)},
 
     --creating and moving around panes
-    {key="j",mods="CTRL|SHIFT",action=wezterm.action.SplitHorizontal{args={"bash"}}},
-    {key="h",mods="CTRL|SHIFT",action=wezterm.action.SplitVertical{args={"bash"}}},
+    {key="v",mods="SUPER|CTRL",action=wezterm.action.SplitHorizontal{args={"bash"}}},
+    {key="h",mods="SUPER|CTRL",action=wezterm.action.SplitVertical{args={"bash"}}},
     {key="LeftArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Left")},
     {key="RightArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Right")},
     {key="UpArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Up")},

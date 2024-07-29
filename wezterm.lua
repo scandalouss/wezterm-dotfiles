@@ -28,6 +28,7 @@ conf.display_pixel_geometry="RGB"
 conf.warn_about_missing_glyphs=true
 conf.adjust_window_size_when_changing_font_size=false
 
+--no padding
 conf.window_padding={
     left=0,
     right=0,
@@ -58,6 +59,9 @@ conf.keys={
     {key="RightArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Right")},
     {key="UpArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Up")},
     {key="DownArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Down")},
+    {key="p",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
+    {key="s",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
+    {key="q",mods="SUPER|CTRL",action=wezterm.action.CloseCurrentPane{confirm=false}},
 }
 
 return conf

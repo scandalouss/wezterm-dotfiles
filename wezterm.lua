@@ -18,6 +18,7 @@ conf.window_background_opacity=0.94
 conf.text_background_opacity=1.00
 conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true
+conf.default_cursor_style="BlinkingBlock"
 
 --font stuff
 conf.font=wezterm.font("ubuntumono nerd font")

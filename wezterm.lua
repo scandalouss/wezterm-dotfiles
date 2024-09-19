@@ -9,7 +9,7 @@ end
 
 --generic settings
 conf.check_for_updates=true
-conf.color_scheme="greenred3"
+conf.color_scheme="jellyfish"
 conf.front_end="OpenGL"
 conf.default_cwd=wezterm.home_dir
 conf.default_workspace="home"
@@ -19,9 +19,10 @@ conf.text_background_opacity=1.00
 conf.use_fancy_tab_bar=false
 conf.hide_tab_bar_if_only_one_tab=true
 conf.default_cursor_style="BlinkingBlock"
+conf.window_close_confirmation="NeverPrompt"
 
 --font stuff
-conf.font=wezterm.font("ubuntumono nerd font")
+conf.font=wezterm.font("ubuntumono")
 conf.font_size=11.0
 conf.freetype_load_target="Light"
 conf.freetype_load_flags="NO_HINTING"
@@ -60,9 +61,13 @@ conf.keys={
     {key="RightArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Right")},
     {key="UpArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Up")},
     {key="DownArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Down")},
-    {key="p",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
-    {key="s",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
-    {key="q",mods="SUPER|CTRL",action=wezterm.action.CloseCurrentPane{confirm=false}},
+    {key="l",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
+    {key="r",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
+    {key="q",mods="SUPER|CTRL",action=wezterm.action.CloseCurrentPane{confirm=true}},
+    {key="e",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
+    {key="d",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
+    {key="f",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
+    {key="s",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
 }
 
 return conf

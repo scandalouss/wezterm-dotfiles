@@ -1,6 +1,7 @@
 --finally cleaned it up a bit
 
 local wezterm=require("wezterm")
+local smartsplits=wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 local conf={}
 
 if wezterm.conf_builder then
@@ -9,7 +10,7 @@ end
 
 --generic settings
 conf.check_for_updates=true
-conf.color_scheme="jellyfish"
+conf.color_scheme="greenred"
 conf.front_end="OpenGL"
 conf.default_cwd=wezterm.home_dir
 conf.default_workspace="home"
@@ -64,10 +65,21 @@ conf.keys={
     {key="l",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
     {key="r",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
     {key="q",mods="SUPER|CTRL",action=wezterm.action.CloseCurrentPane{confirm=true}},
-    {key="e",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
-    {key="d",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
-    {key="f",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
-    {key="s",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
+    {key="e",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
+    {key="d",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
+    {key="f",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
+    {key="s",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
 }
+
+smartsplits.apply_to_config(conf, {
+    modifiers={
+        move="CTRL",
+        resize="CTRL|ALT"
+    },
+    direction_keys={
+        move={"LeftArrow", "DownArrow", "UpArrow", "RightArrow",},
+        resize={"s", "d", "e", "f",}
+    }
+})
 
 return conf

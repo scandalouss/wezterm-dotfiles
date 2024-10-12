@@ -63,12 +63,12 @@ conf.keys={
     {key="UpArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Up")},
     {key="DownArrow",mods="CTRL",action=wezterm.action.ActivatePaneDirection("Down")},
     {key="l",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"Clockwise"},
-    {key="r",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
+    {key="k",mods="SUPER|CTRL",action=wezterm.action.RotatePanes"CounterClockwise"},
     {key="q",mods="SUPER|CTRL",action=wezterm.action.CloseCurrentPane{confirm=true}},
-    {key="e",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
-    {key="d",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
-    {key="f",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
-    {key="s",mods="ALT|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
+    {key="e",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Up", 5}},
+    {key="d",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Down", 5}},
+    {key="f",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Right", 5}},
+    {key="s",mods="SUPER|CTRL",action=wezterm.action.AdjustPaneSize{"Left", 8}},
 }
 
 smartsplits.apply_to_config(conf, {
